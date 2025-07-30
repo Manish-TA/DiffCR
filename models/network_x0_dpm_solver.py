@@ -18,37 +18,37 @@ class Network(BaseNetwork):
         elif module_name == 'ours':
             from .ours.unet_down3 import UNet
         elif module_name == "ours":
-            from .ours.ours import UNet
+            from .ours.nafnet import UNet
         elif module_name == "conv2former":
             from .ours.guided_diffusion_likai import UNet
         elif module_name == "double":
-            from .ours.ours_double import UNet
+            from .ours.nafnet_double import UNet
         elif module_name == "double_encoder":
-            from .ours.ours_double_encoder import UNet
+            from .ours.nafnet_double_encoder import UNet
         elif module_name == "ours_ours":
-            from .ours.ours_ours import UNet
+            from .ours.nafnet_ours import UNet
         elif module_name == "ours_res":
-            from .ours.ours_res_noinp import UNet
+            from .ours.nafnet_res_noinp import UNet
         elif module_name == "ours_newca_noinp":
-            from .ours.ours_newca_noinp import UNet
+            from .ours.nafnet_newca_noinp import UNet
         elif module_name == "ours_reverseca_noinp":
-            from .ours.ours_reverseca_noinp import UNet
+            from .ours.nafnet_reverseca_noinp import UNet
         elif module_name == "ours_splitca_noinp":
-            from .ours.ours64_splitca_noinp import UNet
+            from .ours.nafnet64_splitca_noinp import UNet
         elif module_name == "ours_nosca_silu_noinp":
-            from .ours.ours_nosca_silu import UNet
+            from .ours.nafnet_nosca_silu import UNet
         elif module_name == "ours_concat_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_noCondFFN_middle_fusion":
-            from .ours.ours_concat_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_noCondFFN_middle_fusion import UNet
+            from .ours.nafnet_concat_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_noCondFFN_middle_fusion import UNet
         elif module_name == "ours_sum_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_noCondFFN_middle_fusion":
-            from .ours.ours_sum_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_noCondFFN_middle_fusion import UNet
+            from .ours.nafnet_sum_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_noCondFFN_middle_fusion import UNet
         elif module_name == "ours_concat_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_middle_fusion":
-            from .ours.ours_concat_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_middle_fusion import UNet
+            from .ours.nafnet_concat_no_condskip_nodrop_noparams_splitca_double_encoder_decoder_middle_fusion import UNet
         elif module_name == "ours_double_encoder_splitcaCond_splitcaUnet":
-            from .ours.ours_double_encoder_splitcaCond_splitcaUnet import UNet
+            from .ours.nafnet_double_encoder_splitcaCond_splitcaUnet import UNet
         elif module_name == "ours_double_encoder_splitcaCond":
-            from .ours.ours_double_encoder_splitcaCond import UNet
+            from .ours.nafnet_double_encoder_splitcaCond import UNet
         elif module_name == "ours_double_encoder_splitcaUnet":
-            from .ours.ours_double_encoder_splitcaUnet import UNet
+            from .ours.nafnet_double_encoder_splitcaUnet import UNet
         self.denoise_fn = UNet(**unet)
         self.beta_schedule = beta_schedule
 
